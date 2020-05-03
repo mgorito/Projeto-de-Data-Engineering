@@ -1,5 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
+from dotenv import load_dotenv
+import os
+import pandas as pd
 
 #criando objeto beautifulsoup
 def create_link(l):
@@ -56,9 +59,7 @@ def scrap_data(l,dic_link):
 
  
 if __name__ == "__main__":
-    from dotenv import load_dotenv
-    import os
-    import pandas as pd
+    #carregando variaveis de ambiente
     load_dotenv()
     #fazendo o request na pagina
     url_base = 'http://books.toscrape.com/'
