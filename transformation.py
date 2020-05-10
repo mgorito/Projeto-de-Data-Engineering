@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from dotenv import load_dotenv
+
 
 def carregar_dados(f):
    df =  pd.read_csv(f,sep=";")
@@ -35,6 +35,7 @@ def qnt_estrela(row):
 
 
 if __name__ == "__main__":
+    from dotenv import load_dotenv
     #carregando as variaveis de ambiente
     load_dotenv()
     PATH = os.getenv("PATH_PROJETO")
